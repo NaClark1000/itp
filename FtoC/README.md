@@ -29,5 +29,30 @@ I then found I could shorten the code by one line by printing and assigning vari
 `let f = 99;
 console.log(c = (f-32)*5/9);`
 
-###Conclusion
+
+
+### Challenge
+For the challenge I first researched how to use the `prompt()` function.  I learned how to implement the function by reading about it on CodeHS, with a [tutorial by Rachel Devaney](https://codehs.com/tutorial/rachel/user-input-in-javascript).
+
+`let f = prompt("What is the temperature in Fahrenheit?");`
+
+I then plugged the reset of the code back in.
+
+`let f = prompt("What is the temperature in Fahrenheit?");
+console.log(c = (f-32)*5/9);`
+
+I then added a response to put the outputted number in context.
+
+`let f = prompt("What is the temperature in Fahrenheit?");
+c = (f-32)*5/9;
+console.log("The temperature in Celcius is", c);`
+
+Again, I made it more concise
+
+`let f = prompt("What is the temperature in Fahrenheit?");
+console.log("The temperature in Celcius is", c = (f-32)*5/9);`
+
+
+
+### Conclusion
 In conclusion, I found that by instead of letting the order of operations do its thing in the code, I could instead force it to work and include parentheses and multiplication signs wherever possible in order to minimize syntax errors.
