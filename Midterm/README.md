@@ -7,11 +7,13 @@ Drew three triangles side by side with a thin rectangle on top.
 Went through the [p5.js reference site](https://p5js.org/reference/), specifically working with [triangles](https://p5js.org/reference/p5/triangle/),
 so I could translate the drawing into pixel coordinates.
 
-`function draw() {
+```
+function draw() {
   background(255);
   triangle(4, 100, 20, 10, 54, 100);
   triangle(54, 100, 70, 10, 104, 100);
-  triangle(104, 100, 120, 10, 150, 100);`
+  triangle(104, 100, 120, 10, 150, 100);
+```
   
 Created three triangles first, then added a rectangle.
 
@@ -23,7 +25,8 @@ rect(0, 30, 150, 10);
 Followed the given instructions, made sure to include functions; `drawObject` ,`translate` , and `scale` to position and scale the object. 
 As well as `push()` and `pop()` to save and restore the current drawing style settings and transformations.  
 
-`function drawObject(x, y, s) {
+```
+function drawObject(x, y, s) {
   push();
   translate(x, y);
   scale(s);
@@ -37,7 +40,8 @@ function draw() {
   drawObject(0, 0, 1);
   drawObject(0, 100, 1);
   drawObject(0, 200, 1);
-}`
+}
+```
 
 ### Phase 4
 
@@ -59,24 +63,27 @@ To ensure that each cell scales properly, it's divided by the columns (x-axis) a
 
 ##### Completed setup
 
-`let columns = 5; 
+```
+let columns = 5; 
 let rows = 5; 
 function setup() {
   createCanvas(500, 500); 
   cellW = width 
   cellH = height
 }
-`
+```
 
 I then copied the code from the previous phase for the `function drawObject()` to save my current object settings and transformations.
 
-`function drawObject(x, y, s) {
+```
+function drawObject(x, y, s) {
   triangle(4, 100, 20, 10, 54, 100);
   triangle(54, 100, 70, 10, 104, 100);
   triangle(104, 100, 120, 10, 150, 100);
   rect(0, 30, 150, 10);
   pop();
-}`
+}
+```
 
 
 For the draw function, I needed a scale value that could change with different columns and row values.
@@ -91,20 +98,24 @@ From here, I'll take the lowest of both values with `min` to get the smallest va
 
 I then added the original widths and heights:
 
-`
+```
   let originalW = 150;
-  let originalH = 100;`
-
+  let originalH = 100;
+```
 
 I then created a nested for loop for both the column and row value, ensuring the loop stops when the value is equal to the given column and row value.
 
-`for (let i = 0; i < columns; i++) {
-    for (let j = 0; j < rows; j++) {`  
+```
+for (let i = 0; i < columns; i++) {
+    for (let j = 0; j < rows; j++) {
+ ```
 
 According to the instructions, "You can multiply the cell width with the current x position in the nested for-loop to position your object in the x-axis. For the y-axis, this will be the cell height multiplied by the current y position."
 
-`let x = i * cellW;
- let y = j * cellH;`
+```
+let x = i * cellW;
+ let y = j * cellH;
+ ```
  
 ####Scaling and Translating
  
@@ -133,7 +144,8 @@ After the combined code was working, I went back and added the user prompt.
 
 
 
-`let a = prompt("a x a");
+```
+let a = prompt("a x a");
 let columns = a;
 let rows = a;
 
@@ -178,3 +190,4 @@ function draw() {
       pop();
       
     }
+    ```
