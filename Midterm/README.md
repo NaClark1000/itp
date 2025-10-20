@@ -1,9 +1,9 @@
 # MIDTERM
-##Nathaniel Oviedo-Clark
-###Phase 1 
+## Nathaniel Oviedo-Clark
+### Phase 1 
 Drew three triangles side by side with a thin rectangle on top.
 
-###Phase 2
+### Phase 2
 Went through the [p5.js reference site](https://p5js.org/reference/), specifically working with [triangles](https://p5js.org/reference/p5/triangle/),
 so I could translate the drawing into pixel coordinates.
 
@@ -18,7 +18,7 @@ Created three triangles first, then added a rectangle.
 `  rect(0, 30, 150, 10);
 }`
 
-###Phase 3
+### Phase 3
 Followed the given instructions, made sure to include functions; `drawObject` ,`translate` , and `scale` to position and scale the object. 
 As well as `push()` and `pop()` to save and restore the current drawing style settings and transformations.  
 
@@ -38,9 +38,9 @@ function draw() {
   drawObject(0, 200, 1);
 }`
 
-###Phase 
+### Phase 4
 
-####Setup
+#### Setup
 For phase four, I first split it into two parts.  Nested loops for the y-axis (columns) and x-axis (rows).  I know I wanted to have a user `prompt` input 
 down the line, but for now they're both set to 5.  
 
@@ -56,7 +56,7 @@ To get individual cell widths:
 To ensure that each cell scales properly, it's divided by the columns (x-axis) and rows (y-axis):
 
 
-#####Completed setup
+##### Completed setup
 
 `let columns = 5; 
 let rows = 5; 
