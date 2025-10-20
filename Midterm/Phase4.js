@@ -9,6 +9,9 @@ function setup() {
 }
 
 function drawObject(x, y, s) {
+  
+  push();
+  
   triangle(4, 100, 20, 10, 54, 100);
   triangle(54, 100, 70, 10, 104, 100);
   triangle(104, 100, 120, 10, 150, 100);
@@ -31,14 +34,14 @@ function draw() {
       let y = j * cellH;
 
       push();
-
+      
       translate(x + cellW / 2, y + cellH / 2);
-
       scale(s);
-
       translate(-originalW / 2, -originalH / 2);
       drawObject(0, 0, 1);
+      
       pop();
+      
     }
   }
 }

@@ -1,16 +1,24 @@
 # MIDTERM
-##Nathaniel Oviedo-Clark
+<<<<<<< HEAD
 ###Phase 1 
+=======
+## Nathaniel Oviedo-Clark
+### Phase 1 
+>>>>>>> 139e05605a140fbd5abf6e1248ae74fe598eb8f3
 Drew three triangles side by side with a thin rectangle on top.
 
-###Phase 2
+### Phase 2
 Went through the [p5.js reference site](https://p5js.org/reference/), specifically working with [triangles](https://p5js.org/reference/p5/triangle/),
 so I could translate the drawing into pixel coordinates.
 
 `function draw() {
+	
   background(255);
+  
   triangle(4, 100, 20, 10, 54, 100);
+  
   triangle(54, 100, 70, 10, 104, 100);
+  
   triangle(104, 100, 120, 10, 150, 100);`
   
 Created three triangles first, then added a rectangle.
@@ -18,7 +26,7 @@ Created three triangles first, then added a rectangle.
 `  rect(0, 30, 150, 10);
 }`
 
-###Phase 3
+### Phase 3
 Followed the given instructions, made sure to include functions; `drawObject` ,`translate` , and `scale` to position and scale the object. 
 As well as `push()` and `pop()` to save and restore the current drawing style settings and transformations.  
 
@@ -38,9 +46,9 @@ function draw() {
   drawObject(0, 200, 1);
 }`
 
-###Phase 
+### Phase 4
 
-####Setup
+#### Setup
 For phase four, I first split it into two parts.  Nested loops for the y-axis (columns) and x-axis (rows).  I know I wanted to have a user `prompt` input 
 down the line, but for now they're both set to 5.  
 
@@ -56,7 +64,7 @@ To get individual cell widths:
 To ensure that each cell scales properly, it's divided by the columns (x-axis) and rows (y-axis):
 
 
-#####Completed setup
+##### Completed setup
 
 `let columns = 5; 
 let rows = 5; 
@@ -135,33 +143,47 @@ After the combined code was working, I went back and added the user prompt.
 `let a = prompt("a x a");
 let columns = a;
 let rows = a;
+
 function setup() {
   createCanvas(500, 500);
   cellW = width / columns;
   cellH = height / rows;
 }
+
 function drawObject(x, y, s) {
+  
+  push();
+  
   triangle(4, 100, 20, 10, 54, 100);
   triangle(54, 100, 70, 10, 104, 100);
   triangle(104, 100, 120, 10, 150, 100);
-  rect(0, 30, 150, 10)
+  rect(0, 30, 150, 10);
+
   pop();
 }
+
 function draw() {
   background(255);
+
   let originalW = 150;
   let originalH = 100;
+
   let s = min(cellW / originalW, cellH / originalH);
+
   for (let i = 0; i < columns; i++) {
     for (let j = 0; j < rows; j++) {
       let x = i * cellW;
       let y = j * cellH;
+
       push();
+      
       translate(x + cellW / 2, y + cellH / 2);
       scale(s);
       translate(-originalW / 2, -originalH / 2);
       drawObject(0, 0, 1);
+      
       pop();
+      
     }
   }
 }`
