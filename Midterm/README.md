@@ -15,7 +15,8 @@ so I could translate the drawing into pixel coordinates.
   
 Created three triangles first, then added a rectangle.
 
-`  rect(0, 30, 150, 10);
+` 
+rect(0, 30, 150, 10);
 }`
 
 ### Phase 3
