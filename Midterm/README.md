@@ -1,10 +1,6 @@
 # MIDTERM
-<<<<<<< HEAD
-###Phase 1 
-=======
-## Nathaniel Oviedo-Clark
+
 ### Phase 1 
->>>>>>> 139e05605a140fbd5abf6e1248ae74fe598eb8f3
 Drew three triangles side by side with a thin rectangle on top.
 
 ### Phase 2
@@ -12,13 +8,9 @@ Went through the [p5.js reference site](https://p5js.org/reference/), specifical
 so I could translate the drawing into pixel coordinates.
 
 `function draw() {
-	
   background(255);
-  
   triangle(4, 100, 20, 10, 54, 100);
-  
   triangle(54, 100, 70, 10, 104, 100);
-  
   triangle(104, 100, 120, 10, 150, 100);`
   
 Created three triangles first, then added a rectangle.
@@ -185,7 +177,3 @@ function draw() {
       pop();
       
     }
-  }
-}`
-
-
