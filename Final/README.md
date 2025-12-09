@@ -148,8 +148,8 @@ While working on the looper, I was also drawing what the interface was potential
 I based the interface off a BOSS SP-505, the same sampler used in the Dakim Boiler Room set.
 
 
-<img src="img/Display.png" alt="Display" height = "445" width="550"/>
-<img src="img/boss.png" alt="Boss SP 505" height = "445" width="550"/>
+<img src="img/Display.png" alt="Display" height = "440" width="550"/>
+<img src="img/boss.png" alt="Boss SP 505" height = "440" width="550"/>
 
 
 
